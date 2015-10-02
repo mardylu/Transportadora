@@ -1,0 +1,77 @@
+﻿@model Transportador.Models.TransportadoraModels
+
+@Scripts.Render("~/bundles/jquery")
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Transportadora</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control", } })
+                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ClassificacaoId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.DropDownListFor(model => model.ClassificacaoId, new SelectList(Model.Classificacao, "Id", "Nome"), "Selecione" , Model.ClassificacaoId)
+                @Html.ValidationMessageFor(model => model.ClassificacaoId, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Gravar" class="btn btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Retornar", "Index", new { @class = "btn btn-danger" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script>
+
+
+
+    $(document).ready(function () {
+        $("#classificacao").change(function () {
+            $.ajax({
+                type: "POST",
+                url: "exemplo.php",
+                data: { montadora: $("#montadora").val() },
+                dataType: "json",
+                success: function (json) {
+                    var options = "";
+                    $.each(json, function (key, value) {
+                        options += '<option value="' + key + '">' + value + '</option>';
+                    });
+                    $("#veiculo").html(options);
+                }
+            });
+        });
+    });
+
+
+
+
+
+
+
+</script>

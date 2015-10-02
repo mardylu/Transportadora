@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Data.Entity.Repository", "System.Data.Entity.Repository\System.Data.Entity.Repository.csproj", "{2F2B04A6-0D34-48E5-8A01-9BB98EA60F31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing.IntegrationTests", "Testing\Testing.IntegrationTests\Testing.IntegrationTests.csproj", "{087380F3-8B62-48A6-96C4-8534B214BC15}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccLocalPath0 = .
+		SccLocalPath1 = System.Data.Entity.Repository
+		SccLocalPath2 = Testing\\Testing.IntegrationTests
+		SccNumberOfProjects = 3
+		SccProjectName1 = System.Data.Entity.Repository
+		SccProjectName2 = Testing/Testing.IntegrationTests
+		SccProjectUniqueName1 = System.Data.Entity.Repository\\System.Data.Entity.Repository.csproj
+		SccProjectUniqueName2 = Testing\\Testing.IntegrationTests\\Testing.IntegrationTests.csproj
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs20
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{087380F3-8B62-48A6-96C4-8534B214BC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{087380F3-8B62-48A6-96C4-8534B214BC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{087380F3-8B62-48A6-96C4-8534B214BC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{087380F3-8B62-48A6-96C4-8534B214BC15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2B04A6-0D34-48E5-8A01-9BB98EA60F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2B04A6-0D34-48E5-8A01-9BB98EA60F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2B04A6-0D34-48E5-8A01-9BB98EA60F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2B04A6-0D34-48E5-8A01-9BB98EA60F31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
